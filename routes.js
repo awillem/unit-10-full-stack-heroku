@@ -3,7 +3,7 @@
 const express = require('express');
 const router = express.Router();
 const auth = require('basic-auth');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const SaltRounds = 10;
 
 const User = require('./models').User;
