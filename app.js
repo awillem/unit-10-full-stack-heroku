@@ -21,7 +21,6 @@ const enableGlobalErrorLogging = process.env.ENABLE_GLOBAL_ERROR_LOGGING === 'tr
 // create the Express app
 const app = express();
 
-app.use(express.static("client/build"));
 
 app.use(jsonParser());
 // setup morgan which gives us http request logging
@@ -80,12 +79,21 @@ app.use((err, req, res, next) => {
   });
 });
 
+// Serve Static assets if in productionc
+if(process.env.NODE_ENV === 'production'){
+  //set static folder
+  app.use(express.static("client/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
+
+
+
 // set our port
 app.set('port', process.env.PORT || 5000);
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
 
 // start listening on our port
 const server = app.listen(app.get('port'), () => {
