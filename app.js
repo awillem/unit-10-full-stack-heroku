@@ -84,7 +84,7 @@ app.use((err, req, res, next) => {
 app.set('port', process.env.PORT || 5000);
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 // start listening on our port
