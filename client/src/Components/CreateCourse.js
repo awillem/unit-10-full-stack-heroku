@@ -53,7 +53,7 @@ createCourse = (cTitle, cDescription, cTime, cMaterials) => {
       password: this.props.user.password
     }
   };
-  axios.post('http://localhost:5000/api/courses', {
+  axios.post('/api/courses', {
     title: createTitle,
     description: createDescription,
     estimatedTime: createTime,
