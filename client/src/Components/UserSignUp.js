@@ -68,7 +68,7 @@ signUp = (first, last, email, password) => {
   let lName = last;
   let eAddress = email;
   let  pass = password;
-  axios.post('http://localhost:5000/api/users', {
+  axios.post('/api/users', {
     firstName: fName,
     lastName: lName,
     emailAddress: eAddress,
