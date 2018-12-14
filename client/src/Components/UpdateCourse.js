@@ -69,7 +69,7 @@ class UpdateCourse extends Component {
         let updateTime = uTime;
         let updateMaterials = uMaterials;
         let updateId = id;
-        let url = `http://localhost:5000/api/courses/${updateId}`;
+        let url = `/api/courses/${updateId}`;
         let config = {
           auth: {
             username: this.props.user.emailAddress,
