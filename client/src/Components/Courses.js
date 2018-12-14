@@ -23,6 +23,7 @@ class Courses extends Component {
             });
           })
           .catch(error => {
+              console.log("is this it?");
             return window.location.href = "/error";
           });
       }
