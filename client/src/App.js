@@ -51,7 +51,7 @@ signIn = (email,pass) => {
     userInvalid: false,
     passwordInvalid: false
   });
-  axios.get('http://localhost:5000/api/users', { 
+  axios.get('/api/users', { 
     auth: {
       username: user,
       password: password
