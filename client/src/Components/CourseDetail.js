@@ -15,7 +15,7 @@ class CourseDetail extends Component {
 // loads in the correct course information based on the id.  
 // if course is not found, routes to /notfound.  Other errors to /error
     componentDidMount() {
-        axios.get(`http://localhost:5000/api/courses/${this.props.id}`)
+        axios.get(`/api/courses/${this.props.id}`)
           .then(response => {
             this.setState({
                 id: response.data._id,
