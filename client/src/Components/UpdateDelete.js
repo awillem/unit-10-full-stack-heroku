@@ -6,7 +6,7 @@ class UpdateDelete extends Component {
 
         //deletes current course if auth user is course owner, returns to home page
     deleteCourse = (deleteId) => {
-        let url = `http://localhost:5000/api/courses/${deleteId}`;
+        let url = `/api/courses/${deleteId}`;
         axios.delete(url, {
             auth: {
                 username: this.props.user.emailAddress,
