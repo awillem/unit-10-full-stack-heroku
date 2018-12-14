@@ -19,7 +19,7 @@ class UpdateCourse extends Component {
     //loads course information.  If the returned course user doesn't match authenticated user, routes to /forbidden
     //if course is not found, routes to /not found, otherwise to /error
     componentDidMount() {
-        axios.get(`http://localhost:5000/api/courses/${this.props.match.params.id}`)
+        axios.get(`/api/courses/${this.props.match.params.id}`)
           .then(response => {
             this.setState({
                 id: response.data._id,
