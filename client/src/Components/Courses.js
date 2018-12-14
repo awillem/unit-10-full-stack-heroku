@@ -16,7 +16,7 @@ class Courses extends Component {
 
     // loads course list.  if error, routes to /error
     componentDidMount() {
-        axios.get('http://localhost:5000/api/courses')
+        axios.get('/api/courses')
           .then(response => {
             this.setState({
               courses: response.data
