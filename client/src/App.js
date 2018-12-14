@@ -136,7 +136,7 @@ signOut = () => {
                 <Route exact path="/" render={() => <Courses  />} />
                 <Route exact path="/courses" render={() => <Courses  />} />
                 <PrivateRoute path="/courses/create" component={CreateCourse} user={this.state.user}   />
-                <PrivateRoute path="/courses/:id/update" update={this.updateCourse}  user={this.state.user} component={UpdateCourse}    />} />
+                <PrivateRoute path="/courses/:id/update" update={this.updateCourse}  user={this.state.user} component={UpdateCourse}     />
                 <Route path="/courses/:id" render={({match}) => <CourseDetail id={match.params.id} user={this.state.user} activeUser={this.state.activeUser}  />} />
                 <Route path="/signin" render={() => <UserSignIn signIn={this.signIn} error={this.state.error} activeUser={this.activeUser} userInvalid={this.state.userInvalid} passwordInvalid={this.passwordInvalid} />} />
                 <Route path="/signup" render={() => <UserSignUp signIn={this.signIn} error={this.state.signUpError} validationError={this.state.validationError}/>} />
