@@ -90,8 +90,6 @@ app.use((err, req, res, next) => {
 });
 
 
-console.log('oh no');
-
 
 
 // set our port

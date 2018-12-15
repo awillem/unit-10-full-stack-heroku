@@ -81,8 +81,6 @@ handleSubmit = e => {
   this.createCourse(this.state.title,this.state.description,this.state.time,this.state.materials);
   
 }
-
-
     render() {
 
       //if there is a validation error, sets variable to the ValidationError component which is passed the error information.  
@@ -93,6 +91,9 @@ handleSubmit = e => {
       } else {
         validation = "";
       }
+
+      let name = `${this.props.user.firstName} ${this.props.user.lastName}`;
+      
 
       return (
           <div className="bounds course--detail">
@@ -112,7 +113,7 @@ handleSubmit = e => {
                   placeholder="Course title..."
                   value={this.state.title}
                   onChange={this.onTitleChange} /></div>
-                  <p>By Joe Smith</p>
+                  <p>By {name}</p>
                 </div>
                 <div className="course--description">
                   <div><textarea 
